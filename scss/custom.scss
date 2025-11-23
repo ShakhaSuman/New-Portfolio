@@ -17,7 +17,7 @@ body {
     color: #555;
     @include font-size(1rem);
     background-image: url("../assets/img/body-bg.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
 
     @include media-breakpoint-up(md) {
@@ -374,6 +374,10 @@ header {
             background-image: url("../assets/img/hcmetal-1.png");
         }
 
+        &.neglia {
+            background-image: url("../assets/img/neglia-1.png");
+        }
+
         &-lg {
             height: 200px;
 
@@ -411,6 +415,118 @@ header {
         a:not(:first-child) {
             display: none;
         }
+    }
+}
+
+.get-in-touch-section {
+    padding: 1rem 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: 3rem 0;
+    }
+
+    .col-left {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    .contact-details {
+        border-radius: 20px;
+        background: $white;
+        padding: 2rem 1.5rem;
+        text-align: center;
+
+        h4 {
+            font-family: "Lexend", sans-serif;
+        }
+
+        img {
+            border-radius: 0;
+        }
+    }
+
+    .contact-item {
+        position: relative;
+        transition: 0.3s ease all;
+
+        &:hover {
+            transform: translateY(-15px);
+        }
+
+        img {
+            margin: 0 auto;
+            height: 40px;
+            transition: 0.3s ease all;
+        }
+    }
+
+    .socials {
+        // margin: 0 -0.2rem;
+
+        a {
+            display: inline-block;
+            padding: 0 0.2rem;
+            position: relative;
+
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                    filter: brightness(0.7);
+                }
+            }
+        }
+
+        img {
+            height: 30px;
+            transition: 0.3s ease all;
+        }
+    }
+
+    .contact-form {
+        padding: 1.5rem 1rem;
+        background: $white;
+        border-radius: 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 2rem 1.5rem;
+        }
+
+        input {
+            border: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+
+            @include media-breakpoint-up(lg) {
+                height: 50px;
+                padding: 0.5rem 1.5rem;
+            }
+        }
+
+        textarea {
+            border: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+
+            @include media-breakpoint-up(lg) {
+                height: 180px;
+                padding: 0.5rem 1.5rem;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $dark-color;
+    padding: 1rem;
+    color: $white;
+
+    @include media-breakpoint-up(lg) {
+        padding: 1.5rem 1rem;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 }
 

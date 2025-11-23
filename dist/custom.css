@@ -11869,7 +11869,7 @@ body {
   color: #555;
   font-size: 1rem;
   background-image: url("../assets/img/body-bg.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 100%;
 }
 @media (min-width: 768px) {
@@ -12202,6 +12202,9 @@ header .nav-link:hover {
 .projects-section .masonry-item.hcmetal {
   background-image: url("../assets/img/hcmetal-1.png");
 }
+.projects-section .masonry-item.neglia {
+  background-image: url("../assets/img/neglia-1.png");
+}
 .projects-section .masonry-item-lg {
   height: 200px;
 }
@@ -12239,6 +12242,101 @@ header .nav-link:hover {
 }
 .projects-section .masonry-item a:not(:first-child) {
   display: none;
+}
+
+.get-in-touch-section {
+  padding: 1rem 0;
+}
+@media (min-width: 992px) {
+  .get-in-touch-section {
+    padding: 3rem 0;
+  }
+}
+.get-in-touch-section .col-left img {
+  border-radius: 20px;
+}
+.get-in-touch-section .contact-details {
+  border-radius: 20px;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.get-in-touch-section .contact-details h4, .get-in-touch-section .contact-details .h4 {
+  font-family: "Lexend", sans-serif;
+}
+.get-in-touch-section .contact-details img {
+  border-radius: 0;
+}
+.get-in-touch-section .contact-item {
+  position: relative;
+  transition: 0.3s ease all;
+}
+.get-in-touch-section .contact-item:hover {
+  transform: translateY(-15px);
+}
+.get-in-touch-section .contact-item img {
+  margin: 0 auto;
+  height: 40px;
+  transition: 0.3s ease all;
+}
+.get-in-touch-section .socials a {
+  display: inline-block;
+  padding: 0 0.2rem;
+  position: relative;
+}
+.get-in-touch-section .socials a:hover img {
+  transform: scale(1.2);
+  filter: brightness(0.7);
+}
+.get-in-touch-section .socials img {
+  height: 30px;
+  transition: 0.3s ease all;
+}
+.get-in-touch-section .contact-form {
+  padding: 1.5rem 1rem;
+  background: #fff;
+  border-radius: 20px;
+}
+@media (min-width: 992px) {
+  .get-in-touch-section .contact-form {
+    padding: 2rem 1.5rem;
+  }
+}
+.get-in-touch-section .contact-form input {
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+@media (min-width: 992px) {
+  .get-in-touch-section .contact-form input {
+    height: 50px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+.get-in-touch-section .contact-form textarea {
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+@media (min-width: 992px) {
+  .get-in-touch-section .contact-form textarea {
+    height: 180px;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+footer {
+  background-color: #373737;
+  padding: 1rem;
+  color: #fff;
+}
+@media (min-width: 992px) {
+  footer {
+    padding: 1.5rem 1rem;
+  }
+}
+footer p {
+  margin-bottom: 0;
 }
 
 .lightbox .lb-data .lb-close {
