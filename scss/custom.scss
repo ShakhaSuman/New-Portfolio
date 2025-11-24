@@ -7,7 +7,12 @@ $light-blue: 628ECE;
 $white: #fff;
 $black: #000;
 
+html {
+    overflow-x: hidden !important;
+}
+
 body {
+    overflow-x: hidden !important;
     scroll-behavior: smooth;
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
@@ -23,6 +28,10 @@ body {
     @include media-breakpoint-up(md) {
         @include font-size(1.125rem);
     }
+}
+
+[data-aos] {
+    overflow-x: hidden;
 }
 
 h1,
@@ -574,6 +583,20 @@ header {
             }
         }
     }
+}
+
+/* Keep AOS-animated elements from adding horizontal overflow */
+[data-aos^="fade-right"],
+[data-aos^="fade-left"],
+[data-aos^="slide-right"],
+[data-aos^="slide-left"] {
+    /* make sure their pre-animation transform doesn't extend layout */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform, opacity;
+    overflow-x: hidden;
+    /* optional safe clamp */
+    max-width: 100%;
 }
 
 footer {
