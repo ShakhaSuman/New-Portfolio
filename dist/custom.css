@@ -12007,6 +12007,66 @@ header .nav-link:hover {
   color: #f73101;
 }
 
+@media (max-width: 767.98px) {
+  a.nav-link {
+    color: #fff;
+  }
+}
+.navbar-toggler {
+  border: 0;
+  outline: 0 !important;
+  padding: 0;
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  .navbar-toggler {
+    font-size: 2rem;
+  }
+}
+.navbar-toggler {
+  color: #f73101;
+}
+
+.navbar-toggler:focus {
+  outline: 0 !important;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Slide-in menu */
+.navbar-collapse {
+  position: fixed !important;
+  top: 0;
+  right: -300px; /* Hidden initially */
+  width: 300px;
+  height: 100%;
+  color: #fff;
+  background: rgb(55, 55, 55);
+  z-index: 9999 !important;
+  transition: right 0.3s ease;
+  padding: 20px;
+}
+
+/* Close button inserted by jQuery */
+.navbar-collapse .close-btn {
+  display: block;
+  font-size: 26px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Desktop view (normal collapse) */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: static !important;
+    width: auto;
+    height: auto;
+    right: 0;
+    background: transparent;
+    padding: 0;
+    transition: none;
+  }
+}
 .home-section {
   padding: 1.5rem 0;
 }
@@ -12249,7 +12309,7 @@ header .nav-link:hover {
 }
 @media (min-width: 992px) {
   .get-in-touch-section {
-    padding: 3rem 0;
+    padding: 1rem 0 3rem;
   }
 }
 .get-in-touch-section .col-left img {
@@ -12258,8 +12318,13 @@ header .nav-link:hover {
 .get-in-touch-section .contact-details {
   border-radius: 20px;
   background: #fff;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   text-align: center;
+}
+@media (min-width: 992px) {
+  .get-in-touch-section .contact-details {
+    padding: 2rem 1.5rem;
+  }
 }
 .get-in-touch-section .contact-details h4, .get-in-touch-section .contact-details .h4 {
   font-family: "Lexend", sans-serif;
@@ -12270,6 +12335,7 @@ header .nav-link:hover {
 .get-in-touch-section .contact-item {
   position: relative;
   transition: 0.3s ease all;
+  word-break: break-word;
 }
 .get-in-touch-section .contact-item:hover {
   transform: translateY(-15px);
@@ -12293,7 +12359,7 @@ header .nav-link:hover {
   transition: 0.3s ease all;
 }
 .get-in-touch-section .contact-form {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   background: #fff;
   border-radius: 20px;
 }
@@ -12326,7 +12392,7 @@ header .nav-link:hover {
 }
 
 footer {
-  background-color: #373737;
+  background-color: rgb(55, 55, 55);
   padding: 1rem;
   color: #fff;
 }

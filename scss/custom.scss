@@ -2,7 +2,7 @@
 
 $primary: #f73101;
 $secondary: #2e2c64;
-$dark-color: #373737;
+$dark-color: rgb(55, 55, 55);
 $light-blue: 628ECE;
 $white: #fff;
 $black: #000;
@@ -161,6 +161,61 @@ header {
         &:hover {
             color: $primary;
         }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    a.nav-link {
+        color: $white;
+    }
+}
+
+.navbar-toggler {
+    border: 0;
+    outline: 0 !important;
+    padding: 0;
+    @include font-size(2rem);
+    color: $primary;
+}
+
+.navbar-toggler:focus {
+    outline: 0 !important;
+    border: 0;
+    box-shadow: none;
+}
+
+/* Slide-in menu */
+.navbar-collapse {
+    position: fixed !important;
+    top: 0;
+    right: -300px; /* Hidden initially */
+    width: 300px;
+    height: 100%;
+    color: $white;
+    background: $dark-color;
+    z-index: 9999 !important;
+    transition: right 0.3s ease;
+    padding: 20px;
+}
+
+/* Close button inserted by jQuery */
+.navbar-collapse .close-btn {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Desktop view (normal collapse) */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        position: static !important;
+        width: auto;
+        height: auto;
+        right: 0;
+        background: transparent;
+        padding: 0;
+        transition: none;
     }
 }
 
@@ -422,7 +477,7 @@ header {
     padding: 1rem 0;
 
     @include media-breakpoint-up(lg) {
-        padding: 3rem 0;
+        padding: 1rem 0 3rem;
     }
 
     .col-left {
@@ -434,8 +489,12 @@ header {
     .contact-details {
         border-radius: 20px;
         background: $white;
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
         text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            padding: 2rem 1.5rem;
+        }
 
         h4 {
             font-family: "Lexend", sans-serif;
@@ -449,6 +508,7 @@ header {
     .contact-item {
         position: relative;
         transition: 0.3s ease all;
+        word-break: break-word;
 
         &:hover {
             transform: translateY(-15px);
@@ -484,7 +544,7 @@ header {
     }
 
     .contact-form {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem;
         background: $white;
         border-radius: 20px;
 

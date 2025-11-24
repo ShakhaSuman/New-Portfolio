@@ -52,4 +52,23 @@ $('.skill-slider').slick({
 });
 
 
+$(document).ready(function () {
+
+    // Add close button dynamically
+    if ($('.navbar-collapse .close-btn').length === 0) {
+        $('.navbar-collapse').prepend('<span class="close-btn">&times;</span>');
+    }
+
+    // Open menu
+    $('.navbar-toggler').on('click', function () {
+        $('.navbar-collapse').css('right', '0');
+    });
+
+    // Close menu (close-btn or clicking a nav link)
+    $('.navbar-collapse .close-btn, .navbar-collapse .nav-link').on('click', function () {
+        $('.navbar-collapse').css('right', '-300px');
+    });
+
+});
+
 
